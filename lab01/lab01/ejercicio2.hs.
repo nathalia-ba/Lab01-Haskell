@@ -1,0 +1,17 @@
+
+primerElemento :: [a] -> a
+primerElemento (x:_) = x
+
+productoLista :: [Int] -> Int
+productoLista [] = 1
+productoLista (x:xs) = x * productoLista xs
+
+eliminarNegativos :: [Int] -> [Int]
+eliminarNegativos [] = []
+eliminarNegativos (x:xs)
+    | x >= 0 = x : eliminarNegativos xs
+    | otherwise = eliminarNegativos xs
+
+invertir :: [a] -> [a]
+invertir [] = []
+invertir (x:xs) = invertir xs ++ [x]
